@@ -8,15 +8,25 @@ import com.twu.biblioteca.ui.UserInterface;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class BibliotecaApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        UserInterface ui = new UserInterface();
-        ui.printWelcomeMessage("Welcome to Biblioteca\n\n");
+        BookCatalog catalog = new BookCatalog();
+
+        UserInterface ui = new UserInterface(catalog.getBookList());
+        ui.printWelcomeMessage("Welcome to Biblioteca");
+
+        System.out.println("Please, choose one option");
+        Scanner scanner = new Scanner(System.in);
+        int option = scanner.nextInt();
 
         ui.getMenuOptions();
+
+        ui.chooseOption(option);
+
     }
 
 

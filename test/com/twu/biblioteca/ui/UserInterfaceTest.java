@@ -50,7 +50,7 @@ public class UserInterfaceTest {
         bookList.add(book1);
         bookList.add(book2);
 
-        ui.printBookList(bookList);
+        ui.printBookList();
 
         Assert.assertThat(outContent.toString(), containsString("Book"));
         Assert.assertThat(outContent.toString(), containsString("Author"));
@@ -71,7 +71,22 @@ public class UserInterfaceTest {
     }
 
     @Test
-    public void chooseOption_shouldShowContent_whenUserChooseOneOption() {
+    public void chooseOption_shouldShowContent_whenUserChooseOneOption() throws Exception {
+        BookCatalog catalog = new BookCatalog();
+        UserInterface ui = new UserInterface(catalog.getBookList());
+
+        ui.chooseOption(1);
+        Assert.assertTrue(outContent.size() > 0);
 
     }
+
+    @Test(expected = Exception.class)
+    public void chooseOption_shouldThrowAnException_whenUserChooseInvalidOption() throws Exception {
+        BookCatalog catalog = new BookCatalog();
+        UserInterface ui = new UserInterface(catalog.getBookList());
+        ui.chooseOption(0);
+
+    }
+
+
 }
