@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2df7936d-cd16-414a-933b-39cbe09a3cdd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/book/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/book/BookCatalog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/book/BookCatalogTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/book/BookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/ui/UserInterfaceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/ui/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/ui/UserInterfaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/ui/UserInterfaceTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +20,8 @@
           <file leaf-file-name="UserInterfaceTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/ui/UserInterfaceTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="446">
-                  <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+                <state relative-caret-position="386">
+                  <caret line="69" column="83" selection-start-line="69" selection-start-column="83" selection-end-line="69" selection-end-column="83" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -60,7 +54,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="BibliotecaApp.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="BibliotecaApp.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
@@ -72,13 +66,15 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/ui/UserInterface.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+                <state relative-caret-position="390">
+                  <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#780#781#0" expanded="true" />
+                    <element signature="e#816#817#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -221,7 +217,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserInterfaceTest.printBookList_shouldPrintAllBooksDetails_whenReceiveABookList">
+  <component name="RunManager" selected="JUnit.UserInterfaceTest.getMenuOptions_shouldShowOptions_whenProgramStarts">
     <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
       <module name="biblioteca" />
@@ -249,6 +245,29 @@
       <option name="PACKAGE_NAME" value="book" />
       <option name="MAIN_CLASS_NAME" value="book.BookCatalogTest" />
       <option name="METHOD_NAME" value="getBookList_shouldReturnAListOfAllBooks" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="UserInterfaceTest.getMenuOptions_shouldShowOptions_whenProgramStarts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca.ui" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.ui.UserInterfaceTest" />
+      <option name="METHOD_NAME" value="getMenuOptions_shouldShowOptions_whenProgramStarts" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -305,29 +324,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="UserInterfaceTest.printWelcomeMessage_shouldPrintWelcomeMessage_whenReceiveAString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca.ui" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.ui.UserInterfaceTest" />
-      <option name="METHOD_NAME" value="printWelcomeMessage_shouldPrintWelcomeMessage_whenReceiveAString" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -368,18 +364,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.BibliotecaApp" />
-      <item itemvalue="JUnit.UserInterfaceTest.printWelcomeMessage_shouldPrintWelcomeMessage_whenReceiveAString" />
       <item itemvalue="JUnit.BookCatalogTest.getBookList_shouldReturnAListOfAllBooks" />
       <item itemvalue="JUnit.UserInterfaceTest.printBookList_shouldPrintAllBooksName_whenReceiveABookList" />
       <item itemvalue="JUnit.UserInterfaceTest.printBookList_shouldPrintAllBooksDetails_whenReceiveABookList" />
+      <item itemvalue="JUnit.UserInterfaceTest.getMenuOptions_shouldShowOptions_whenProgramStarts" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserInterfaceTest.getMenuOptions_shouldShowOptions_whenProgramStarts" />
         <item itemvalue="JUnit.UserInterfaceTest.printBookList_shouldPrintAllBooksDetails_whenReceiveABookList" />
         <item itemvalue="Application.BibliotecaApp" />
         <item itemvalue="JUnit.UserInterfaceTest.printBookList_shouldPrintAllBooksName_whenReceiveABookList" />
         <item itemvalue="JUnit.BookCatalogTest.getBookList_shouldReturnAListOfAllBooks" />
-        <item itemvalue="JUnit.UserInterfaceTest.printWelcomeMessage_shouldPrintWelcomeMessage_whenReceiveAString" />
       </list>
     </recent_temporary>
   </component>
@@ -397,9 +393,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserInterfaceTest_printBookList_shouldPrintAllBooksName_whenReceiveABookList - 2018.07.16 at 16h 35m 43s.xml">
-      <configuration name="UserInterfaceTest.printBookList_shouldPrintAllBooksName_whenReceiveABookList" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserInterfaceTest_printBookList_shouldPrintAllBooksDetails_whenReceiveABookList - 2018.07.16 at 18h 04m 32s.xml">
       <configuration name="UserInterfaceTest.printBookList_shouldPrintAllBooksDetails_whenReceiveABookList" configurationId="JUnit" />
     </history-entry>
@@ -427,6 +420,9 @@
     <history-entry file="UserInterfaceTest_printBookList_shouldPrintAllBooksDetails_whenReceiveABookList - 2018.07.17 at 15h 14m 16s.xml">
       <configuration name="UserInterfaceTest.printBookList_shouldPrintAllBooksDetails_whenReceiveABookList" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserInterfaceTest_getMenuOptions_shouldShowOptions_whenProgramStarts - 2018.07.17 at 15h 23m 31s.xml">
+      <configuration name="UserInterfaceTest.getMenuOptions_shouldShowOptions_whenProgramStarts" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -442,7 +438,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969698" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32969698" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16165951" />
@@ -524,6 +520,8 @@
           <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -617,16 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/ui/UserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -637,10 +625,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/ui/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/ui/UserInterfaceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+        <state relative-caret-position="386">
+          <caret line="69" column="83" selection-start-line="69" selection-start-column="83" selection-end-line="69" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

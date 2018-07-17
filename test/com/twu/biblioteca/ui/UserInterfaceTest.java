@@ -63,6 +63,15 @@ public class UserInterfaceTest {
     }
 
     @Test
-    public void showMenuOptions() {
+    public void getMenuOptions_shouldShowOptions_whenProgramStarts() {
+        UserInterface ui = new UserInterface();
+
+        ui.getMenuOptions();
+        Assert.assertThat(outContent.toString(), containsString("1 - List books"));
+    }
+
+    @Test
+    public void chooseOption_shouldShowContent_whenUserChooseOneOption() {
+
     }
 }

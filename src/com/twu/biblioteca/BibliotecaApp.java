@@ -14,13 +14,9 @@ public class BibliotecaApp {
     public static void main(String[] args) {
 
         UserInterface ui = new UserInterface();
-        ui.printWelcomeMessage("Welcome to Biblioteca");
+        ui.printWelcomeMessage("Welcome to Biblioteca\n\n");
 
-        BookCatalog catalog = new BookCatalog();
-
-        ui.printBookList(catalog.getBookList());
-
-
+        ui.getMenuOptions();
     }
 
 

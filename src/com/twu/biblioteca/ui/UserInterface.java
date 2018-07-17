@@ -29,4 +29,7 @@ public class UserInterface {
     }
 
 
+    public void getMenuOptions() {
+        System.out.println("1 - List books");
+    }
 }
