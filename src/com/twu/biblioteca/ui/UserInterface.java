@@ -21,7 +21,7 @@ public class UserInterface {
         return message;
     }
 
-    public void printMessage(String message) {
+    private void printMessage(String message) {
         System.out.println(getMessage(message));
     }
 
@@ -29,27 +29,38 @@ public class UserInterface {
         System.out.println(welcome);
     }
 
-    public void printBookList() {
+    private void printBookList() {
+        System.out.println("\n=======================");
+        System.out.println("       Book List");
+        System.out.println("=======================\n");
+
         System.out.printf("%-20s %-20s %-20s\n", "Book", "Author", "Year");
 
         for(int index = 0; index < this.bookList.size(); index++) {
 
-            System.out.printf("%-20s %-20s %-10s\n", this.bookList.get(index).getTitle(), this.bookList.get(index).getAuthor(), this.bookList.get(index).getYear());
+            System.out.printf("%-20s %-20s %-20s\n", this.bookList.get(index).getTitle(), this.bookList.get(index).getAuthor(), this.bookList.get(index).getYear());
 
         }
     }
 
 
-    public void getMenuOptions() {
+    public void printMenuOptions() {
+        System.out.println("\n=======================");
+        System.out.println("      MENU OPTIONS");
+        System.out.println("=======================\n");
         System.out.println("1 - List books");
+        System.out.println("0 - Quit Library");
     }
 
 
-    public void chooseOption(int option) throws Exception {
+    public void chooseOption(int option) {
+
         switch (option){
             case 1: this.printBookList();
-            default: throw new Exception();
-        }
+                break;
 
+            default: printMessage("Select a valid option!");
+                break;
+        }
     }
 }

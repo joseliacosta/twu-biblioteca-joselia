@@ -14,15 +14,15 @@ public class BibliotecaApp {
         UserInterface ui = new UserInterface(catalog.getBookList());
         ui.printWelcomeMessage("Welcome to Biblioteca");
 
-        System.out.println("Please, choose one option");
-        Scanner scanner = new Scanner(System.in);
-        int option = scanner.nextInt();
+        int option = 1;
+        while(option != 0){
+            ui.printMenuOptions();
+            System.out.println("Please, choose one option");
+            Scanner scanner = new Scanner(System.in);
+            option = scanner.nextInt();
+            ui.chooseOption(option);
+        }
 
-        ui.getMenuOptions();
-
-        ui.chooseOption(option);
 
     }
-
-
 }
