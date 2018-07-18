@@ -37,51 +37,39 @@ public class UserInterfaceTest {
     }
 
     @Test
-    public void printBookList_shouldPrintAllBooksDetails_whenReceiveABookList() {
-        UserInterface ui = new UserInterface();
-        List<Book> bookList = new ArrayList<>();
-        Book book1 = new Book("Java", "Autor", 300, 2017);
-        Book book2 = new Book("C#", "Autor 2", 300, 2018);
-        bookList.add(book1);
-        bookList.add(book2);
-
-        ui.printBookList();
-
-        Assert.assertThat(outContent.toString(), containsString("Book"));
-        Assert.assertThat(outContent.toString(), containsString("Author"));
-        Assert.assertThat(outContent.toString(), containsString("Year"));
-        Assert.assertThat(outContent.toString(), containsString("Java"));
-        Assert.assertThat(outContent.toString(), containsString("2017"));
-        Assert.assertThat(outContent.toString(), containsString("C#"));
-        Assert.assertThat(outContent.toString(), containsString("Autor 2"));
-        Assert.assertThat(outContent.toString(), containsString("2018"));
-    }
-
-    @Test
-    public void getMenuOptions_shouldShowOptions_whenProgramStarts() {
+    public void printMenuOptions_shouldShowOptions_whenProgramStarts() {
         UserInterface ui = new UserInterface();
 
-        ui.getMenuOptions();
+        ui.printMenuOptions();
         Assert.assertThat(outContent.toString(), containsString("1 - List books"));
     }
 
     @Test
-    public void chooseOption_shouldShowContent_whenUserChooseOneOption() throws Exception {
+    public void chooseOption_shouldShowContent_whenUserChooseOneOption() {
         BookCatalog catalog = new BookCatalog();
         UserInterface ui = new UserInterface(catalog.getBookList());
 
         ui.chooseOption(1);
-        Assert.assertTrue(outContent.size() > 0);
+        String expectedFirstLine = String.format("%-20s %-20s %-20s\n", "Head First Java", "Sierra & Bates", "2018");
+        String expectedSecondLine = String.format("%-20s %-20s %-20s\n", "Head First HTML", "Maiara & Maraisa", "2017");
+        String expectedThirdLine = String.format("%-20s %-20s %-20s\n", "Head First CSS", "Leandro & Leonardo", "2017");
 
+        Assert.assertThat(outContent.toString(), containsString("Book"));
+        Assert.assertThat(outContent.toString(), containsString("Author"));
+        Assert.assertThat(outContent.toString(), containsString("Year"));
+        Assert.assertThat(outContent.toString(), containsString(expectedFirstLine));
+        Assert.assertThat(outContent.toString(), containsString(expectedSecondLine));
+        Assert.assertThat(outContent.toString(), containsString(expectedThirdLine));
     }
 
-    @Test(expected = Exception.class)
-    public void chooseOption_shouldThrowAnException_whenUserChooseInvalidOption() throws Exception {
+    @Test
+    public void chooseOption_shouldPrintAnErrorMessage_whenTheOptionIsInvalid() {
         BookCatalog catalog = new BookCatalog();
         UserInterface ui = new UserInterface(catalog.getBookList());
+
         ui.chooseOption(0);
 
+        Assert.assertThat(outContent.toString(), containsString("Select a valid option!"));
     }
-
 
 }
