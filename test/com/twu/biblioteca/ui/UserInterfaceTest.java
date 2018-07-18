@@ -1,19 +1,14 @@
 package com.twu.biblioteca.ui;
-
-import book.Book;
 import book.BookCatalog;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class UserInterfaceTest {
 
