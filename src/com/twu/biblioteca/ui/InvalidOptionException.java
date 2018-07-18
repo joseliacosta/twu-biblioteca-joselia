@@ -1,4 +1,5 @@
 package com.twu.biblioteca.ui;
 
-public class InvalidOptionException {
+public class InvalidOptionException extends Exception {
+
 }
